@@ -75,7 +75,7 @@ function App() {
     <Authenticator>
       {({ signOut, user }) => (
         <div className="App">
-          <h1>My Notes App</h1>
+          <h1>Our Lovely Album</h1>
           <input
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             placeholder="Note name"
@@ -89,13 +89,13 @@ function App() {
             value={formData.description}
           />
           <input type="file" onChange={onChange} />
-          <button onClick={createNote}>Create Note</button>
+          <button onClick={createNote}>Add Pic</button>
           <div style={{ marginBottom: 30 }}>
             {notes.map((note) => (
               <div key={note.id || note.name}>
                 <h2>{note.name}</h2>
                 <p>{note.description}</p>
-                <button onClick={() => deleteNote(note)}>Delete note</button>
+                <button onClick={() => deleteNote(note)}>Delete Pic</button>
                 {note.image && (
                   <img src={note.image} alt="ima" style={{ width: 400 }} />
                 )}
