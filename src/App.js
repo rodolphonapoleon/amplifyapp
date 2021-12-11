@@ -76,6 +76,7 @@ function App() {
       {({ signOut, user }) => (
         <div className="App">
           <h1>Our Lovely Album</h1>
+          <h1>Hello {user.username}</h1>
           <input
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             placeholder="Note name"
@@ -102,7 +103,7 @@ function App() {
               </div>
             ))}
           </div>
-          <h1>Hello {user.username}</h1>
+
           <button onClick={signOut}>Sign out</button>
         </div>
       )}
